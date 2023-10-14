@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot and Cold Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="scripting.js" async></script>
+</head>
+<body>
+    <div class="borderdiv">
+        <h1>Try to see if you can guess my number!</h1>
+        <h2>Guess a number from 1 to 100</h2>
+        <h3>And I will tell you if you are <span style="color: orangered">HOT</span> or <span style="color: #007FFF">COLD</span></h3>
+        <p>Keep in mind you only have <strong id="countGuess">5 guesses</strong> right now</p>
+    </div>
+    <br>
+    <h1 id="gameOver"></h1>
+    <form>
+        <label>Guess!</label><br>
+        <input type="number" value="50" id="quantity" min="1" max="100"><br>
+    </form>
+    <div class="button-container">
+        <button onclick="add1()">+1</button>
+        <button onclick="add5()">+5</button>
+        <button onclick="add10()">+10</button>
+        <button onclick="add25()">+25</button>
+        <button onclick="sub1()">-1</button>
+        <button onclick="sub5()">-5</button>
+        <button onclick="sub10()">-10</button>
+        <button onclick="sub25()">-25</button>
+    </div>
+    <div class="btn-group">
+        <button id="commitbutton">Commit</button>
+        <button id="resetbutton">Reset</button>
+    </div>
+    <table id="guesslog">
+        <tr>
+            <th>Guess</th>
+            <th>Status</th>
+        </tr>
+    </table>
+    
+</body>
+</html>
+
